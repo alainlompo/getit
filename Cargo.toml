@@ -2,7 +2,25 @@
 name = "getit"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Alain Lompo {512032+alainlompo@users.noreply.github.com}"]
+description = "A minimal file downloader mimicing wget"
+readme = "README.md"
+keywords = ["http", "client", "cli", "file", "download"]
+categories = ["web-programming::http-client", "command-line-utilities", "network-programming"]
+license = "MIT"
 
 [dependencies]
+indicatif = "0.15.0"
+console = "0.13.0"
+clap = "2.33.2"
+ftp = "3.0.1"
+threadpool = "1.8.1"
+failure = { version = "0.1.8", features = [] }
+url = "1.7.2"
+reqwest = {version = "0.10.8", features = ["blocking"]}
+
+[dev-dependencies]
+assert_cmd = "0.11"
+tiny_http = "0.6.2"
+assert_fs = "0.11"
+predicates = "1.0"
